@@ -1,6 +1,7 @@
 <app-header></app-header>
 <h1>{{title}}</h1>
 
+<!-- Basic form -->
 <form #basicForm="ngForm" (ngSubmit)="getData(basicForm.value)">
   <input type="text" ngModel name="name" placeholder="User-Name">
   <br /> <br />
@@ -16,3 +17,55 @@
   <li>{{userData.email}}</li>
   <li>{{userData.password}}</li>
 </h4>
+
+<!-- Toggle element -->
+<h1 *ngIf="display">
+  Blinking element
+</h1>
+<button (click)="toggle()">Toggle</button>
+
+<!-- Learning bootstrap from here -->
+<!-- Bootstrap -->
+<ngb-alert [dismissible]="false">
+  <strong>Warning!</strong> Better check yourself, you're not looking too good.
+</ngb-alert>
+<!-- Materail UI -->
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+
+<!-- Button in materail UI -->
+<div class="example-label">Raised</div>
+<div class="example-button-row">
+  <button mat-raised-button>Basic</button>
+  <button mat-raised-button disabled>Disabled</button>
+  <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+</div>
+
+<!-- Another example of Material UI -->
+<div class="example-label">Extended Fab</div>
+<div class="example-button-row">
+  <div class="example-flex-container">
+    <div class="example-button-container">
+      <button mat-fab extended>
+        <mat-icon>favorite</mat-icon>
+        Basic
+      </button>
+    </div>
+    <div class="example-button-container">
+      <button mat-fab extended disabled>
+        <mat-icon>favorite</mat-icon>
+        Disabled
+      </button>
+    </div>
+    <div class="example-button-container">
+      <a mat-fab extended routerLink=".">
+        <mat-icon>favorite</mat-icon>
+        Link
+      </a>
+    </div>
+  </div>
+</div>
+
+<div matBadge="4" matBadgeOverlap="false" class="demo-section">Text with a badge</div>
+
+<div matBadge="1" matBadgeSize="small" class="demo-section">Text with small badge</div>
+<div matBadge="1" matBadgeSize="large" class="demo-section">Text with large badge</div>

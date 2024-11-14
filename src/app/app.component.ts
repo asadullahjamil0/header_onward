@@ -14,4 +14,8 @@ export class AppComponent {
     console.log(data);
     this.userData = data;
   }
+  display = false;
+  toggle() {
+    this.display = !this.display;
+  }
 }
