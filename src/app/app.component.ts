@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'header_onward';
+
+  userData: any = {};
+
+  getData(data: any) {
+    console.log(data);
+    this.userData = data;
+  }
 }
