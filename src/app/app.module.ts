@@ -11,6 +11,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatButtonModule } from "@angular/material/button"
 import { MatIconModule } from '@angular/material/icon'
 import { MatBadgeModule } from "@angular/material/badge"
+import { MatFormFieldModule } from "@angular/material/form-field"
+import { MatSelectModule } from "@angular/material/select"
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { MatBadgeModule } from "@angular/material/badge"
     MatSlideToggleModule,
     MatButtonModule,
     MatIconModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [
     provideClientHydration(),
